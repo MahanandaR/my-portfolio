@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahananda Mallikarjun | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f2f3f4;
+      color: #333;
+   
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://cdn.openai.com/chat-assets/hero-placeholder.png') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+      position: relative;
+      line-height: 1.8;
+    }
+    header h1 {
+  margin: 0.3rem 0;
+  font-size: 1.5rem;
+}
+header p {
+  margin: 0.2rem 0;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #0a192f; /* match your navbar background */
+  z-index: 1000;
+  padding: 1rem 0;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+   text-align: center;
+}
+
+    nav a {
+      color: #64ffda;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a {
+  color: #64ffda;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #64ffda;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+
+    section {
+      text-align: center;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-card img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .project {
+      background: white;
+      border-left: 5px solid #64ffda;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background: #0a192f;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-form label {
+      text-align: left;
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      padding: 0.75rem 1.5rem;
+      background-color: #0a192f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #007acc;
+    }
+    .toggle-btn {
+  padding: 10px 20px;
+  background: #0a192f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.toggle-btn:hover {
+  background-color: #007acc;
+}
+  </style>
+</head>
+
+<script>
+  const toggleBtn = document.getElementById("toggle-btn");
+  const moreProjects = document.getElementById("more-projects");
+  let isVisible = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isVisible = !isVisible;
+    moreProjects.style.display = isVisible ? "block" : "none";
+    toggleBtn.textContent = isVisible ? "Show Less" : "Show More";
+  });
+</script>
+
+<body>
+  <header>
+    <p style="font-size: 180%; font-weight: bold;">Mahananda Mallikarjun</p>
+    <p>Data Enthusiast | Transitioning from IT to Analytics</p>
+    <!-- Contact Info -->
+  <p>
+    📞 <a href="tel:+911234567890" style="color: white; text-decoration: none;">+918217316209</a>
+    | Karnataka, India-585327
+  </p>
+    <p>
+      📧 <a href="mailto:mahananda@example.com" style="color: rgb(246, 241, 1); text-decoration: none; font-size: 100%;"><u>mahananda.m209@gmail.com</u></a></u>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/MahanandaR" target="_blank" style="color: rgb(246, 241, 1); margin-right: 1rem;font-size: 100%;">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.linkedin.com/in/mahananda-rasure-031b64162/" target="_blank" style="color:rgb(246, 241, 1); margin-right: 1rem;font-size: 100%;"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.hackerrank.com/profile/mahananda_r209" target="_blank" style="color: rgb(246, 241, 1); margin-right: 1rem;font-size: 100%;">HackerRank</a>
+    </p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificate">Certificate</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+      <h1>About Me</h1>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+    <img src="photo.jpg" alt="Mahananda"
+         style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
+    <p style="flex: 1; max-width: 600px; text-align: left; font-size: 1.1rem;">
+      I am <strong>Mahananda Rasure</strong>, an IT Infrastructure Specialist passionate about transitioning into Data Analysis.
+      I enjoy using data to solve problems and create insights using Python, Power BI, and machine learning techniques.
+      <br><br>
+      Completed my <strong>BTech in Computer Science</strong><br>
+     <i>from Dayananda Sagar College of Engineering, Bangalore</i>
+    </p>
+  </div>
+  </section>
+
+
+  
+
+  <section id="skills">
+    <h1>Skills</h1>
+    <div class="skills-grid">
+      <!-- Python -->
+      <div class="skill-card">
+        <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" />
+        <p>Python</p>
+      </div>
+  
+      <!-- NumPy -->
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968528.png" alt="NumPy" />
+        <p>NumPy</p>
+      </div>
+  
+      <!-- Pandas -->
+      <div class="skill-card">
+        <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" />
+        <p>Pandas</p>
+      </div>
+  
+      <!-- Matplotlib -->
+      <div class="skill-card">
+        <img src="https://matplotlib.org/_static/images/logo2.svg" alt="Matplotlib" />
+        <p>Matplotlib</p>
+      </div>
+  
+      <!-- Seaborn
+      <div class="skill-card">
+        <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" />
+        <p>Seaborn</p>
+      </div> -->
+  
+      <!-- Plotly -->
+      <div class="skill-card">
+        <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" alt="Plotly" />
+        <p>Plotly</p>
+      </div>
+  
+      <!-- Scikit-learn -->
+      <div class="skill-card">
+        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn" />
+        <p>Scikit-learn</p>
+      </div>
+  
+      <!-- MySQL -->
+      <div class="skill-card">
+        <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" />
+        <p>MySQL</p>
+      </div>
+  
+      <!-- Excel -->
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel" />
+        <p>Excel</p>
+      </div>
+  
+      <!-- Power BI -->
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" />
+        <p>Power BI</p>
+      </div>
+  
+      <!-- Tableau -->
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau" />
+        <p>Tableau</p>
+      </div>
+  
+      <!-- Machine Learning -->
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149643.png" alt="Machine Learning" />
+        <p>Machine Learning</p>
+      </div>
+  
+      <!-- Statistics -->
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149627.png" alt="Statistics" />
+        <p>Statistics</p>
+      </div>
+  
+      <!-- NLP
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149686.png" alt="NLP" />
+        <p>NLP</p>
+      </div> -->
+    </div>
+  </section>
+  
+  <section id="certificate">
+  <h2>Certificates</h2>
+  <p>Coming soon...</p>
+</section>
+
+  <section id="projects">
+    <h1>Projects</h1>
+    <div class="project">
+      <h3>Health Insurance Prediction</h3>
+      <p>Estimate health insurance costs based on user lifestyle and health attributes using an ML-powered web app built with Streamlit and XGBoost.</p>
+      <a href="https://github.com/MahanandaR/Insurance_Prediction_MLProject.git" target="_blank">GitHub</a>
+      <a href="https://insurancepredictionmlproject-a8j4d2dao9chryprjm3ust.streamlit.app/" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project">
+      <h3>SmartLinkBot</h3>
+      <p>Build a chatbot that allows users to ask questions about the latest news headlines from reliable sources like NDTV, BBC, or India Today, and get summarized, intelligent answers.</p>
+      <a href="https://github.com/MahanandaR/SmartLinkBot" target="_blank">GitHub</a>
+      <a href=" https://smartlinkbot-lh5dxq5wbnhapwzqrqxxju.streamlit.app/" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project">
+      <h3>Movie Recommender System</h3>
+      <p>A content-based movie recommendation model using cosine similarity and TMDb API.</p>
+      <a href="https://github.com/MahanandaR/Movie-recommender-system" target="_blank">GitHub</a>
+      <a href="https://movie-recommender-system-using-ml.streamlit.app/" target="_blank">Live Demo</a>
+    </div>
+
+  
+    <button id="showMoreBtn" class="toggle-btn">
+    Show More
+  </button>
+
+    <div id="more-projects" style="display: none;">
+    <div class="project">
+      <h3>Bank Loan Dashboard</h3>
+      <p>Interactive Power BI dashboard to visualize loan performance metrics with DAX and data modeling.</p>
+    </div>
+    <!-- Add more here -->
+
+    <button id="showLessBtn" class="toggle-btn" style="margin-top: 1rem;">
+      Show Less
+    </button>
+    </div>
+  </section>
+
+
+
+  <!-- <section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section> -->
+
+  <section id="contact">
+     <h1>Contact Me</h1>
+  <form class="contact-form" action="https://formsubmit.co/mahananda.m209@gmail.com" method="POST">
+  <!-- Prevent CAPTCHA -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Redirect after submission -->
+  <input type="hidden" name="_next" value="https://your-website-link.com/thankyou.html">
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+</section>
+  <footer>
+    <p>Mahananda Mallikarjun</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    //   e.preventDefault();
+    //   alert('Thank you for your message, ' + document.getElementById('name').value + '!');
+    //   this.reset();
+    // });
+
+    document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // Remove active class from all links
+    document.querySelectorAll('nav a').forEach(navLink => navLink.classList.remove('active'));
+
+    // Add active class to the clicked link
+    this.classList.add('active');
+
+    // Smooth scroll to target section
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+  </script>
+ 
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const showMoreBtn = document.getElementById("showMoreBtn");
+    const showLessBtn = document.getElementById("showLessBtn");
+    const moreProjects = document.getElementById("more-projects");
+
+    showMoreBtn.addEventListener("click", () => {
+      moreProjects.style.display = "block";
+      showMoreBtn.style.display = "none"; // hide Show More
+    });
+
+    showLessBtn.addEventListener("click", () => {
+      moreProjects.style.display = "none";
+      showMoreBtn.style.display = "inline-block"; // show Show More again
+    });
+  });
+</script>
+
+</body>
+</html>
