@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <title>Mahananda Mallikarjun | Portfolio</title>
   <style>
     body {
@@ -220,7 +224,7 @@ nav a.active::after {
   <section id="about">
       <h1>About Me</h1>
     <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <img src="photo.jpg" alt=" "
+    <img src="Mahananda.jpg" alt="Mahananda"
          style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
     <p style="flex: 1; max-width: 600px; text-align: left; font-size: 1.1rem;">
       I am <strong>Mahananda Rasure</strong>, an IT Infrastructure Specialist passionate about transitioning into Data Analysis.
@@ -326,7 +330,7 @@ nav a.active::after {
   
   <section id="certificate">
   <h2>Certificates</h2>
-  <p>Coming soon...</p>
+  <p>Data Science and Artificial Intelligence</p>
 </section>
 
   <section id="projects">
@@ -356,19 +360,43 @@ nav a.active::after {
     <button id="showMoreBtn" class="toggle-btn">
     Show More
   </button>
+ </div>
 
-    <div id="more-projects" style="display: none;">
+  <div id="more-projects" style="display: none;">
     <div class="project">
       <h3>Bank Loan Dashboard</h3>
       <p>Interactive Power BI dashboard to visualize loan performance metrics with DAX and data modeling.</p>
+      <a href="https://github.com/MahanandaR/BANK-Loan-Dashboard" target="_blank">GitHub</a>
     </div>
+
+    <div class="project">
+      <h3>E-commerce Product Delivery Prediction</h3>
+      <p>The goal is to help an international electronics e-commerce company optimize its logistics, improve customer satisfaction, and gain insights into factors affecting delivery performance.</p>
+      <a href="https://github.com/MahanandaR/E-Commerce-Product-Delivery-Prediction" target="_blank">GitHub</a>
+      <a href=" " target="_blank">Live Demo</a>
+    </div>
+  </div>
     <!-- Add more here -->
 
-    <button id="showLessBtn" class="toggle-btn" style="margin-top: 1rem;">
+    <button id="showLessBtn" class="toggle-btn" style="margin-top: 1rem;display: none;">
       Show Less
     </button>
-    </div>
+   
   </section>
+
+
+<section id="contact">
+  <div style="background: #d1cfcf; padding: 1rem; border-radius: 5px;height: 140px; max-width: 600px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+  
+  <h1>Get in Touch</h1>
+  <p>You can reach me via:</p>
+    <i class="fa fa-envelope" style="font-size:22px;color:rgb(42, 38, 38)"></i><a href="mailto:mahananda.m209@gmail.com" style="color: #0a192f; font-weight: bold;text-decoration: none;font-size: 22px;">Email Me</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+     <i class="fa-brands fa-linkedin" style="font-size:22px;color:rgb(26, 136, 240)"></i><a href="https://www.linkedin.com/in/mahananda-rasure-031b64162/" target="_blank" style="color: #0a192f;text-decoration: none; font-weight: bold;font-size: 22px;">LinkedIn </a>
+  </p>
+  </div>
+</section>
+</section>
 
 
 
@@ -385,13 +413,13 @@ nav a.active::after {
     </form>
   </section> -->
 
-  <section id="contact">
+  <!-- <section id="contact">
      <h1>Contact Me</h1>
   <form class="contact-form" action="https://formsubmit.co/mahananda.m209@gmail.com" method="POST">
-  <!-- Prevent CAPTCHA -->
+   Prevent CAPTCHA 
   <input type="hidden" name="_captcha" value="false">
 
-  <!-- Redirect after submission -->
+   Redirect after submission
   <input type="hidden" name="_next" value="https://your-website-link.com/thankyou.html">
 
   <label for="name">Name</label>
@@ -405,7 +433,10 @@ nav a.active::after {
 
   <button type="submit">Submit</button>
 </form>
-</section>
+</section> -->
+
+
+
   <footer>
     <p>Mahananda Mallikarjun</p>
   </footer>
@@ -457,15 +488,14 @@ nav a.active::after {
 
     showMoreBtn.addEventListener("click", () => {
       moreProjects.style.display = "block";
-      showMoreBtn.style.display = "none"; // hide Show More
+      showMoreBtn.style.display = "none";      // hide "Show More"
+      showLessBtn.style.display = "inline-block"; // show "Show Less"
     });
 
     showLessBtn.addEventListener("click", () => {
       moreProjects.style.display = "none";
-      showMoreBtn.style.display = "inline-block"; // show Show More again
+      showMoreBtn.style.display = "inline-block"; // show "Show More"
+      showLessBtn.style.display = "none";      // hide "Show Less"
     });
   });
 </script>
-
-</body>
-</html>
