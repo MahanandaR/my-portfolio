@@ -84,9 +84,9 @@ nav a.active::after {
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.5rem;
+      margin-top: 1.5rem;
     }
 
     .skill-card {
@@ -96,6 +96,8 @@ nav a.active::after {
       text-align: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
+      width: 60%;
+      height: 70%;
     }
 
     .skill-card:hover {
@@ -103,8 +105,8 @@ nav a.active::after {
     }
 
     .skill-card img {
-      width: 64px;
-      height: 64px;
+      width: 50px;
+      height: 50px;
       object-fit: contain;
       margin-bottom: 0.5rem;
     }
@@ -181,6 +183,73 @@ nav a.active::after {
 .toggle-btn:hover {
   background-color: #007acc;
 }
+
+/*EXP CSS */
+#experience {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.experience-card {
+  background: #ffffff;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.exp-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.exp-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background: #f2f3f4;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.exp-top h3 {
+  margin: 0;
+  color: #0a192f;
+}
+
+.exp-role {
+  margin: 0.2rem 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.exp-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.experience-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;   /* controls bullet distance */
+  margin: 0.8rem 0 0;
+}
+
+.experience-card ul li {
+  padding-left: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: left;
+}
+
   </style>
 </head>
 
@@ -216,6 +285,7 @@ nav a.active::after {
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
     <a href="#certificate">Certificate</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -227,8 +297,10 @@ nav a.active::after {
     <img src="Mahananda.jpg" alt="Mahananda"
          style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
     <p style="flex: 1; max-width: 600px; text-align: left; font-size: 1.1rem;">
-      I am <strong>Mahananda Rasure</strong>, an IT Infrastructure Specialist passionate about transitioning into Data Analysis.
-      I enjoy using data to solve problems and create insights using Python, Power BI, and machine learning techniques.
+      I am <strong>Mahananda Rasure</strong>, Data Management & Analytics Professional with 4+ years of IT and analytics experience, specializing in data manipulation (SQL,
+Python/Pandas), financial reporting, BI dashboards, and process automation. <br>Skilled in improving data quality, validating financial
+datasets, and delivering accurate and timely insights. Strong ability to automate workflows, optimize reporting processes, and
+translate business requirements into scalable analytics solutions
       <br><br>
       Completed my <strong>BTech in Computer Science</strong><br>
      <i>from Dayananda Sagar College of Engineering, Bangalore</i>
@@ -262,7 +334,7 @@ nav a.active::after {
   
       <!-- Matplotlib -->
       <div class="skill-card">
-        <img src="https://matplotlib.org/_static/images/logo2.svg" alt="Matplotlib" />
+        <img src="https://img.icons8.com/?size=100&id=1vW3iHleDPto&format=png&color=000000" alt="Matplotlib" />
         <p>Matplotlib</p>
       </div>
   
@@ -320,40 +392,138 @@ nav a.active::after {
         <p>Statistics</p>
       </div>
   
-      <!-- NLP
+      <!-- Data Visualization-->
       <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149686.png" alt="NLP" />
-        <p>NLP</p>
-      </div> -->
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149696.png" alt="Data Visualization" />
+        <p>Data Visualization</p>
+      </div> 
+
+      <!-- AWS-->
+      <div class="skill-card">
+        <img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" alt="AWS" />
+        <p>ASW</p>
+      </div> 
+
     </div>
   </section>
 
+  <section id="experience">
+  <h1>Experience</h1>
+
+  <!-- Experience Card -->
+  <div class="experience-card">
+    <div class="exp-top">
+      <img src="nullclass-logo.jpg" alt="NullClass Logo" class="exp-logo" />
+      <div>
+        <h3>NullClass</h3>
+        <p class="exp-role">Data Analyst Intern</p>
+        <span class="exp-meta">Oct 2025 – Dec 2025 • Remote, India</span>
+      </div>
+    </div>
+    <ul>
+      <li>Performed data cleaning, validation, and analysis using Microsoft Excel, Google Sheets, and Python to ensure data
+accuracy, integrity, and extract meaningful insights from large datasets.</li>
+      <li> Developed interactive Power BI dashboards and reports to visualize trends, patterns, and key metrics, enabling
+data-driven decision-making and business growth.</li>
+
+      <li>Worked closely with product and operations teams to update reports, refine metrics, and ensure analytics outputs aligned
+with business needs.</li>
+      <li>Converted raw operational data into executive-ready dashboards, enabling faster review cycles and informed
+decision-making.</li>
+    </ul>
+  </div>
+
+  <!-- Experience Card -->
+  <div class="experience-card">
+    <div class="exp-top">
+      <img src="dxc-logo.png" alt="DXC Logo" class="exp-logo" />
+      <div>
+        <h3>DXC Technology</h3>
+        <p class="exp-role">Analyst I – Infrastructure Services</p>
+        <span class="exp-meta">June 2020 – July 2024 • Bengaluru, India</span>
+      </div>
+    </div>
+    <ul>
+      <li>Conducted Excel-based data analysis to monitor performance metrics, monthly KPIs, and SLA indicators, enabling accurate weekly, monthly, and quarterly reporting for business stakeholders.</li>
+      <li>Built Excel dashboards to track incident KPIs and highlight recurring issues → improved process efficiency by 15% .</li>
+      <li>Collaborated with cross-functional teams to ensure accurate data validation and reporting flow.</li>
+    <li>Instead of manually monitoring servers, consolidated health metrics into Excel dashboards to identify failure patterns and
+support proactive decisions that reduced outages by 20% .</li>
+    <li>Supported data migration and operational analytics by moving data from on-premises systems to AWS S3, analyzing
+incident and SLA trends, and delivering insights that helped reduce SLA breaches and improve service quality.</li>
+    <li>Supported ETL-style data preparation and transformation for reporting and dashboarding.</li>
+    </ul>
+  </div>
+
+  <!-- Experience Card -->
+  <div class="experience-card">
+    <div class="exp-top">
+      <img src="mcware-logo.JPG" alt="Mcare Logo" class="exp-logo" />
+      <div>
+        <h3>Mcare Technologies</h3>
+        <p class="exp-role">Front End Developer</p>
+        <span class="exp-meta">Jun 2019 – Nov 2019 • Bengaluru, India</span>
+      </div>
+    </div>
+    <ul>
+      <li>Designed and deployed interactive web applications using HTML, CSS, and JavaScript.</li>
+      <li>Managed full website development lifecycle from design to deployment.</li>
+      <li>Improved UI/UX for better usability and performance.</li>
+    </ul>
+  </div>
+</section>
+
+
+  
   
   <section id="certificate">
-  <h2>Certificates</h2>
-  <p>Data Science and Artificial Intelligence</p>
-    <a href="https://bia.bostoninstituteofanalytics.org/bia-certification/QklBXzczMjdfQklB">Artificial Intelligence</a>
-    <a href="https://bia.bostoninstituteofanalytics.org/bia-certification/QklBXzczMjZfQklB">Data Science</a>
-
-    
+  <h1>Certificates</h1>
+  <img src="Mahananda_Mallikarjun_DATA_SCIENCE_Certificate_DATMUKCMRV.jpeg" alt="AWS"  width="700"
+    height="400" />
+  <b><p>Data Science and Artificial Intelligence</p></b>
 </section>
-  
-  
 
   <section id="projects">
     <h1>Projects</h1>
+
+     <div class="project">
+      <h3>End-to-End Automated Sales Analytics</h3>
+      <p>Built a fully automated ETL pipeline using Python, SQLAlchemy, and GitHub Actions for seamless daily updates.
+        Developed custom ETL scripts to process and load 50,000+ sales records into a Neon PostgreSQL cloud database...</p>
+      <a href="https://www.linkedin.com/in/mahananda-rasure-031b64162/details/projects/" target="_blank">GitHub</a>
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiNTA2YWQwNTItYTY2OC00NjFkLWE4OGMtNmE1NjY0NzliMDFiIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9" target="_blank">Live Demo</a>
+    </div>
+
+    <div class="project">
+      <h3>Customer-trends-data-analysis</h3>
+      <p>This project examines shopping patterns and customer behavior using a dataset of 3,900 transactions across various product categories..</p>
+      <a href="https://github.com/MahanandaR/Customer_Trends_Behavior_Analysis---DataAnalysis" target="_blank">GitHub</a>
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiZGIzOWU2ZDQtNjg1MC00ZDRjLTk4M2QtY2FlMDMzMzYxNTUyIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9" target="_blank">Live Demo</a>
+    </div>
+
+     <div class="project">
+      <h3>Bank Loan Dashboard</h3>
+      <p>Interactive Power BI dashboard to visualize loan performance metrics with DAX and data modeling.</p>
+      <a href="https://github.com/MahanandaR/BANK-Loan-Dashboard" target="_blank">GitHub</a>
+    </div>
+    
+    <div id="more-projects" style="display: none;">
+      
+    
+
     <div class="project">
       <h3>Health Insurance Prediction</h3>
       <p>Estimate health insurance costs based on user lifestyle and health attributes using an ML-powered web app built with Streamlit and XGBoost.</p>
       <a href="https://github.com/MahanandaR/Insurance_Prediction_MLProject.git" target="_blank">GitHub</a>
       <a href="https://insurancepredictionmlproject-a8j4d2dao9chryprjm3ust.streamlit.app/" target="_blank">Live Demo</a>
     </div>
+  
 
     <div class="project">
-      <h3>SmartLinkBot</h3>
-      <p>Build a chatbot that allows users to ask questions about the latest news headlines from reliable sources like NDTV, BBC, or India Today, and get summarized, intelligent answers.</p>
-      <a href="https://github.com/MahanandaR/SmartLinkBot" target="_blank">GitHub</a>
-      <a href=" https://smartlinkbot-lh5dxq5wbnhapwzqrqxxju.streamlit.app/" target="_blank">Live Demo</a>
+      <h3>E-commerce Product Delivery Prediction</h3>
+      <p>The goal is to help an international electronics e-commerce company optimize its logistics, improve customer satisfaction, and gain insights into factors affecting delivery performance.</p>
+      <a href="https://github.com/MahanandaR/E-Commerce-Product-Delivery-Prediction" target="_blank">GitHub</a>
+      <a href=" " target="_blank">Live Demo</a>
     </div>
 
     <div class="project">
@@ -363,32 +533,28 @@ nav a.active::after {
       <a href="https://movie-recommender-system-using-ml.streamlit.app/" target="_blank">Live Demo</a>
     </div>
 
-  
-    <button id="showMoreBtn" class="toggle-btn">
-    Show More
-  </button>
- </div>
-
-  <div id="more-projects" style="display: none;">
-    <div class="project">
-      <h3>Bank Loan Dashboard</h3>
-      <p>Interactive Power BI dashboard to visualize loan performance metrics with DAX and data modeling.</p>
-      <a href="https://github.com/MahanandaR/BANK-Loan-Dashboard" target="_blank">GitHub</a>
+     <div class="project">
+      <h3>Car_Price_Prediction</h3>
+      <p>In the used car market, buyers and sellers often struggle to determine a fair price for their vehicle.
+        This project aims to provide accurate and transparent pricing for used cars by analyzing real-world data..</p>
+      <a href="https://github.com/MahanandaR/Car_Price_Prediction" target="_blank">GitHub</a>
+      <a href="https://mahanandar.github.io/Car_Price_Prediction/" target="_blank">Live Demo</a>
     </div>
 
-    <div class="project">
-      <h3>E-commerce Product Delivery Prediction</h3>
-      <p>The goal is to help an international electronics e-commerce company optimize its logistics, improve customer satisfaction, and gain insights into factors affecting delivery performance.</p>
-      <a href="https://github.com/MahanandaR/E-commerce_Product_Delivery_Prediction_" target="_blank">GitHub</a>
-      <a href=" " target="_blank">Live Demo</a>
+     <div class="project">
+      <h3>SmartLinkBot</h3>
+      <p>Build a chatbot that allows users to ask questions about the latest news headlines from reliable sources like NDTV, BBC, or India Today, and get summarized, intelligent answers.</p>
+      <a href="https://github.com/MahanandaR/SmartLinkBot" target="_blank">GitHub</a>
+      <a href=" https://smartlinkbot-lh5dxq5wbnhapwzqrqxxju.streamlit.app/" target="_blank">Live Demo</a>
     </div>
-  </div>
+
+</div>
     <!-- Add more here -->
+    <button id="showMoreBtn" class="toggle-btn">Show More</button>
 
     <button id="showLessBtn" class="toggle-btn" style="margin-top: 1rem;display: none;">
       Show Less
     </button>
-   
   </section>
 
 
@@ -404,44 +570,6 @@ nav a.active::after {
   </div>
 </section>
 </section>
-
-
-
-  <!-- <section id="contact">
-    <h2>Contact</h2>
-    <form class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required />
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section> -->
-
-  <!-- <section id="contact">
-     <h1>Contact Me</h1>
-  <form class="contact-form" action="https://formsubmit.co/mahananda.m209@gmail.com" method="POST">
-   Prevent CAPTCHA 
-  <input type="hidden" name="_captcha" value="false">
-
-   Redirect after submission
-  <input type="hidden" name="_next" value="https://your-website-link.com/thankyou.html">
-
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" required />
-
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" required />
-
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
-
-  <button type="submit">Submit</button>
-</form>
-</section> -->
-
 
 
   <footer>
@@ -460,11 +588,6 @@ nav a.active::after {
       });
     });
 
-    // document.querySelector('.contact-form').addEventListener('submit', function (e) {
-    //   e.preventDefault();
-    //   alert('Thank you for your message, ' + document.getElementById('name').value + '!');
-    //   this.reset();
-    // });
 
     document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', function (e) {
@@ -506,5 +629,3 @@ nav a.active::after {
     });
   });
 </script>
-
-
