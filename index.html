@@ -1,633 +1,797 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <title>Mahananda Mallikarjun | Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f2f3f4;
-      color: #333;
-   
-    }
-
-    header {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://cdn.openai.com/chat-assets/hero-placeholder.png') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 0.5rem;
-      position: relative;
-      line-height: 1.8;
-    }
-    header h1 {
-  margin: 0.3rem 0;
-  font-size: 1.5rem;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahananda Mallikarjun | Data Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--nav-height:60px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#9ca9eb;color:#1f2937;width: 1200px;margin-left:10%;}
+.nav{position:fixed;top:0;left:0;right:0;margin:auto;max-width:100%;display:flex;justify-content:center;align-items:center;gap:6px;background:#ffffff;padding:6px 10px;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.08);z-index:3000;height:var(--nav-height);}
+.nav a{margin:0 8px;text-decoration:none;color:#111;font-weight:500;font-size:0.95rem;}
+.section{min-height:auto;padding:30px 8%;scroll-margin-top:calc(var(--nav-height) + 20px);}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.hero h1{font-size:2.4rem;}
+.hero span{color:#6688ed;}
+.btns{margin-top:25px;}
+.btn{padding:12px 25px;border-radius:25px;border:none;margin:10px;font-weight:600;cursor:pointer;}
+.primary{background:#706cdd;color:#fff;}
+.secondary{background:#f6f6f8;color:#4f46e5;border:2px solid #4f46e5;}
+.card{background:#fff;border-radius:14px;padding:14px;box-shadow:0 8px 20px rgba(0,0,0,0.08);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;}
+.footer{text-align:center;padding:40px;color:#444;}
+.social-links {display: flex;flex-direction: row;align-items: center;justify-content: center;width: 100%;gap: 10px;}
+.social-links a {text-decoration: none;display: flex;align-items: center;justify-content: center;justify-items: center;box-sizing: border-box;width: 100%;font-size: large;
+  font-weight: 450;letter-spacing: -1px;padding: 6px 12px;color: #1A2421;border: 1px solid #1A2421;border-radius: 100px;transition: all 0.3s ease-in-out;}
+.social-links a i {margin-left: 12px;transform: rotate(-45deg);transition: all 0.3s ease-in-out;}
+.social-links a:hover i {transform: rotate(0deg);}
+.social-links a:hover {background-color: #BBBBFF;}
+.secondary2{color:black;background-color: #cadefb;text-decoration: none;}
+.secondary2:hover{
+  background:rgb(1, 18, 46);
+  color:white;
+  transform:translateY(-4px);
+  border:1px solid #0750c4;
+  box-shadow:0 10px 25px rgba(79,70,229,0.25);
 }
-header p {
-  margin: 0.2rem 0;
+/* Default arrow state (tilted ↗) */
+.secondary2 span{
+  display:inline-block;
+  margin-left:6px;
+  transform: rotate(-0deg);   /* ↗ */
+  transition: transform 0.3s ease;
 }
-nav {
-  position: sticky;
-  top: 0;
-  background-color: #0a192f; /* match your navbar background */
-  z-index: 1000;
-  padding: 1rem 0;
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-   text-align: center;
-}
-
-    nav a {
-      color: #64ffda;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a {
-  color: #64ffda;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
+/* Hover = straight arrow */
+.secondary2:hover span{
+  transform: rotate(45deg); 
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #64ffda;
-  transition: width 0.3s ease-in-out;
+.project-body ul{list-style-position: inside;padding-left: 0; margin-top: 10px;}
+.project-body li{display: flex;align-items: flex-start;gap: 10px;margin-bottom: 10px;line-height: 1.6;}
+.project-body li::before{content: "•";flex-shrink: 0;font-size: 1.2em; color: #15151a; margin-top: 2px;}
+.proj-btn{padding:8px 16px;  border-radius:999px;border:1.5px solid #111; text-decoration:none;font-size:0.85rem;font-weight:500;color:#111;display:inline-flex;
+  align-items:center; gap:6px;background:#fff;transition:0.2s ease;}
+.proj-btn:hover{background:#4f46e5;color:#fff;border-color:#4f46e5;}
+.proj-list{list-style:none;padding:0;margin:10px 0 18px 0;}
+.proj-list li{display:flex;gap:10px;line-height:1.6;margin-bottom:8px;}
+.proj-list li::before{ content:"▷";color:#4f46e5;font-weight:bold;flex-shrink:0;}
+.project-header{font-weight:600;font-size:1rem;border-radius: 3%;}
+.project-header span {display: inline-block;transition: transform 0.3s ease;}
+.project-header span {transform: translateY(-4px); /* move upward */}
+/* Hover effect */
+.project-item:hover{border:1px solid #4f46e5;box-shadow:0 10px 26px rgba(79,70,229,0.15);}
+/* Arrow style */
+.project-item .arrow{font-size:15px;transition:all 0.35s ease;display:inline-block;margin-right: 10px;}
+/* Arrow animation */
+.project-item:hover .arrow{transform:translate(6px,-6px) rotate(-25deg);margin-right: 10px;}
+.wave{display:inline-block;animation: waveAnim 1.8s infinite ease-in-out;transform-origin: 70% 70%;}
+/* Waving animation */
+@keyframes waveAnim{
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(14deg); }
+  20%  { transform: rotate(-8deg); }
+  30%  { transform: rotate(14deg); }
+  40%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
-nav a:hover::after,
-nav a.active::after {
-  width: 100%;
+
+/* ------------------------------------------------- Responsive ------------------------------------------------------------- */
+@media (max-width: 900px){
+  :root{--nav-height:70px;}
+  .section{padding:25px 6%;}
+}
+
+@media (max-width: 600px){
+  :root{--nav-height:90px;}
+  .nav{flex-wrap:wrap;border-radius:18px;}
+  .section{padding:22px 5%;}
+  .hero h1{font-size:2rem;}
+  .grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));}
+}
+
+@media (max-width: 420px){
+  :root{--nav-height:105px;}
+  .section{padding:20px 4%;}
+  .hero h1{font-size:1.7rem;}
 }
 
 
-    section {
-      text-align: center;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
+/* -------- Mobile Navbar -------- */
+.hamburger{display:none;font-size:22px;cursor:pointer;padding:4px 10px;}
+.nav-content{display:flex;align-items:center;gap:6px;}
+.mobile-menu{display:none;position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#fff;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.12);padding:15px 25px;z-index:4000;flex-direction:column;gap:12px;}
+.mobile-menu a{text-decoration:none;color:#111;font-weight:500;}
 
-    .skill-card {
-      background: white;
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      width: 60%;
-      height: 70%;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .skill-card img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-      margin-bottom: 0.5rem;
-    }
-
-    .skill-card p {
-      margin: 0;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .project {
-      background: white;
-      border-left: 5px solid #64ffda;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      background: #0a192f;
-      color: #ccc;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .contact-form {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .contact-form label {
-      text-align: left;
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      padding: 0.75rem 1.5rem;
-      background-color: #0a192f;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background-color: #007acc;
-    }
-    .toggle-btn {
-  padding: 10px 20px;
-  background: #0a192f;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-.toggle-btn:hover {
-  background-color: #007acc;
+@media(max-width:700px){
+  .nav-content{display:none;}
+  .hamburger{display:block;}
 }
 
-/*EXP CSS */
-#experience {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.experience-card {
-  background: #ffffff;
-  padding: 1.8rem;
-  margin-bottom: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
-}
-
-.exp-top {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.exp-logo {
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-  background: #f2f3f4;
-  padding: 6px;
-  border-radius: 8px;
-}
-
-.exp-top h3 {
-  margin: 0;
-  color: #0a192f;
-}
-
-.exp-role {
-  margin: 0.2rem 0;
-  font-weight: 600;
-  color: #333;
-}
-
-.exp-meta {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.experience-card ul {
-  list-style: disc;
-  padding-left: 1.2rem;   /* controls bullet distance */
-  margin: 0.8rem 0 0;
-}
-
-.experience-card ul li {
-  padding-left: 0;
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-  color: #444;
-  text-align: left;
-}
-
-  </style>
+</style>
 </head>
-
-<script>
-  const toggleBtn = document.getElementById("toggle-btn");
-  const moreProjects = document.getElementById("more-projects");
-  let isVisible = false;
-
-  toggleBtn.addEventListener("click", () => {
-    isVisible = !isVisible;
-    moreProjects.style.display = isVisible ? "block" : "none";
-    toggleBtn.textContent = isVisible ? "Show Less" : "Show More";
-  });
-</script>
-
 <body>
-  <header>
-    <p style="font-size: 180%; font-weight: bold;">Mahananda Mallikarjun</p>
-    <p>Data Enthusiast | Transitioning from IT to Analytics</p>
-    <!-- Contact Info -->
-  <p>
-    📞 <a href="tel:+911234567890" style="color: white; text-decoration: none;">+918217316209</a>
-    | Karnataka, India-585327
-  </p>
-    <p>
-      📧 <a href="mailto:mahananda@example.com" style="color: rgb(246, 241, 1); text-decoration: none; font-size: 100%;"><u>mahananda.m209@gmail.com</u></a></u>&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://github.com/MahanandaR" target="_blank" style="color: rgb(246, 241, 1); margin-right: 1rem;font-size: 100%;">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://www.linkedin.com/in/mahananda-rasure-031b64162/" target="_blank" style="color:rgb(246, 241, 1); margin-right: 1rem;font-size: 100%;"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://www.hackerrank.com/profile/mahananda_r209" target="_blank" style="color: rgb(246, 241, 1); margin-right: 1rem;font-size: 100%;">HackerRank</a>
-    </p>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#certificate">Certificate</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- Navbar outside background -->
+<div class="nav">
 
-  <section id="about">
-      <h1>About Me</h1>
-    <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <img src="Mahananda.jpg" alt="Mahananda"
-         style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
-    <p style="flex: 1; max-width: 600px; text-align: left; font-size: 1.1rem;">
-      I am <strong>Mahananda Mallikarjun</strong>, Data Management & Analytics Professional with 4+ years of IT and analytics experience, specializing in data manipulation (SQL,
-Python/Pandas), financial reporting, BI dashboards, and process automation. <br>Skilled in improving data quality, validating financial
-datasets, and delivering accurate and timely insights. Strong ability to automate workflows, optimize reporting processes, and
-translate business requirements into scalable analytics solutions
-      <br><br>
-      Completed my <strong>BTech in Computer Science</strong><br>
-     <i>from Dayananda Sagar College of Engineering, Bangalore</i>
-    </p>
+<!-- Mobile Hamburger -->
+<div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+
+<div class="nav-content">
+
+<!-- Left Call + Resume Icons -->
+<a href="tel:+918217316209" onclick="showPhone()" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#eef2ff;">
+<img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" style="width:15px;cursor:pointer;">
+</a>
+
+<a href="#" onclick="openResumePreview()" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#eef2ff;">
+<img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" style="width:16px;cursor:pointer;">
+</a>
+
+<!-- Menu -->
+<div style="display:flex;align-items:center;gap:8px;">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+</div>
+
+<!-- Right Icons -->
+<div style="display:flex;align-items:center;gap:6px;">
+<a href="https://www.linkedin.com/in/mahananda-rasure-031b64162" target="_blank" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#eef2ff;">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width:16px;cursor:pointer;">
+</a>
+<a href="mailto:mahananda.m209@gmail.com" style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#eef2ff;">
+<img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" style="width:16px;cursor:pointer;">
+</a>
+</div>
+
+</div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#about" onclick="closeMobile()">About</a>
+<a href="#skills" onclick="closeMobile()">Skills</a>
+<a href="#experience" onclick="closeMobile()">Experience</a>
+<a href="#projects" onclick="closeMobile()">Projects</a>
+<a href="#certificates" onclick="closeMobile()">Certificates</a>
+<a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+</div>
+
+<!-- Resume Preview Modal -->
+<div id="resumeModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:5000;align-items:center;justify-content:center;">
+  <div style="background:#fff;width:90%;max-width:800px;height:90%;border-radius:16px;position:relative;padding:15px;display:flex;flex-direction:column;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <h3>Resume Preview</h3>
+      <div style="display:flex;gap:10px;">
+        <a href="Mahananda_Mallikarjun_DataAnalyst_Resume.pdf" download="Mahananda_Mallikarjun_Resume.pdf" class="btn secondary" style="padding:6px 14px;font-size:0.8rem;">Download</a>
+        <button onclick="closeResumePreview()" class="btn primary" style="padding:6px 14px;font-size:0.8rem;">Close</button>
+      </div>
+    </div>
+    <iframe src="Mahananda_Mallikarjun_DataAnalyst_Resume.pdf" style="width:100%;height:100%;border:none;border-radius:10px;"></iframe>
   </div>
-  </section>
+</div>
+
+<div class="page-bg" style="background:#eef2ff;padding-top:calc(var(--nav-height) + 30px);">
+
+<section class="section hero" id="home">
+<div class="card" style="max-width:900px;width:100%;padding:40px 30px;">
+<h1 style="font-size:2.6rem;">Hi <span class="wave">👋</span>, I'm <span style="color:#4f46e5;">Mahananda Mallikarjun</span></h1>
+<p style="margin-top:10px;font-size:1.05rem;">Data Analyst | Analytics Consultant | BI Specialist</p>
+<div class="btns">
+<a href="#about">
+    <button class="btn primary">Know More</button>
+  </a>
+  <a href="#contact">
+    <button class="btn secondary">Get in Touch</button>
+  </a>
+</div>
+<div style="margin-top:30px;background:#c7d2fe;border-radius:20px;padding:25px;">
+<img src="assets/overview.png" style="max-width:300px;width:100%;">
+</div>
+</div>
+</section>
+
+<!-----------------About---------------------->
+<section class="section" id="about">
+<div class="card">
+<h2>About Me</h2>
+
+<p id="about-short" style="display:flex;gap:8px;align-items:flex-end">
+<img src="assets/Mahananda.jpg" style="width:90px;height:90px;border-radius:18px;box-shadow:0 6px 15px rgba(0,0,0,0.12);flex-shrink:0;">
+<span>Hello! My name is Mahananda Mallikarjun. I am a Data Analyst with 4+ years of experience in analytics, business intelligence, and reporting. I specialize in Python, SQL, Power BI, and Excel to convert complex data into actionable insights.
+<span style="color:#4f46e5;cursor:pointer;font-weight:600;" onclick="toggleAbout()"> Read More</span></span>
+</p>
+
+<p id="about-full" style="display:none;gap:15px;align-items:flex-start;flex-direction:column;">
+<img src="assets/Mahananda.jpg" style="width:90px;height:90px;border-radius:18px;box-shadow:0 6px 15px rgba(0,0,0,0.12);flex-shrink:0;">
+<span>Hello! My name is Mahananda Mallikarjun. I am a Data Analyst with 4+ years of experience in analytics, business intelligence, and reporting across enterprise environments. I specialize in Python, SQL, Power BI, and Excel to convert complex data into actionable insights and business decisions. I enjoy building real-world, end-to-end analytics systems, automated ETL pipelines, dashboards, and data-driven solutions that solve business problems and support strategic decision-making.
+<span style="color:#4f46e5;cursor:pointer;font-weight:600;" onclick="toggleAbout()"> Read Less</span></span>
+</p>
+
+<!-- Social Links (Always Visible) -->
+<div id="about-social" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:15px;">
+<a href="https://www.linkedin.com/in/mahananda-rasure-031b64162" target="_blank" class="btn secondary2">LinkedIn <span>↗</span></a>
+<a href="https://www.hackerrank.com/profile/mahananda_r209" target="_blank" class="btn secondary2">HackerRank <span>↗</a>
+<a href="https://github.com/MahanandaR" target="_blank" class="btn secondary2">GitHub <span>↗</a>
+<a href="https://medium.com" target="_blank" class="btn secondary2">Medium <span>↗</a>
+<a href="https://leetcode.com/u/Mahananda_Mallikarjun/" target="_blank" class="btn secondary2">Leetcode <span>↗</a>
+</div>
+
+</div>
+</section>
 
 
-  
 
-  <section id="skills">
-    <h1>Skills</h1>
-    <div class="skills-grid">
-      <!-- Python -->
-      <div class="skill-card">
-        <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" />
-        <p>Python</p>
-      </div>
-  
-      <!-- NumPy -->
-      <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968528.png" alt="NumPy" />
-        <p>NumPy</p>
-      </div>
-  
-      <!-- Pandas -->
-      <div class="skill-card">
-        <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" />
-        <p>Pandas</p>
-      </div>
-  
-      <!-- Matplotlib -->
-      <div class="skill-card">
-        <img src="https://img.icons8.com/?size=100&id=1vW3iHleDPto&format=png&color=000000" alt="Matplotlib" />
-        <p>Matplotlib</p>
-      </div>
-  
-      <!-- Seaborn
-      <div class="skill-card">
-        <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" />
-        <p>Seaborn</p>
-      </div> -->
-  
-      <!-- Plotly -->
-      <div class="skill-card">
-        <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" alt="Plotly" />
-        <p>Plotly</p>
-      </div>
-  
-      <!-- Scikit-learn -->
-      <div class="skill-card">
-        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn" />
-        <p>Scikit-learn</p>
-      </div>
-  
-      <!-- MySQL -->
-      <div class="skill-card">
-        <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" />
-        <p>MySQL</p>
-      </div>
-  
-      <!-- Excel -->
-      <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel" />
-        <p>Excel</p>
-      </div>
-  
-      <!-- Power BI -->
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" />
-        <p>Power BI</p>
-      </div>
-  
-      <!-- Tableau -->
-      <div class="skill-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau" />
-        <p>Tableau</p>
-      </div>
-  
-      <!-- Machine Learning -->
-      <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149643.png" alt="Machine Learning" />
-        <p>Machine Learning</p>
-      </div>
-  
-      <!-- Statistics -->
-      <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149627.png" alt="Statistics" />
-        <p>Statistics</p>
-      </div>
-  
-      <!-- Data Visualization-->
-      <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149696.png" alt="Data Visualization" />
-        <p>Data Visualization</p>
-      </div> 
+<!-----------------------Skills------------------->
+<section class="section" id="skills">
+<h2 style="text-align:center;margin-bottom:25px;">Skills</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
 
-      <!-- AWS-->
-      <div class="skill-card">
-        <img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" alt="AWS" />
-        <p>ASW</p>
-      </div> 
+<div class="card" style="text-align:center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="42"><p>Python</p></div>
 
-    </div>
-  </section>
+<div class="card" style="text-align:center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="42"><p>NumPy</p></div>
 
-  <section id="experience">
-  <h1>Experience</h1>
+<div class="card" style="text-align:center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="42"><p>Pandas</p></div>
 
-  <!-- Experience Card -->
-  <div class="experience-card">
-    <div class="exp-top">
-      <img src="nullclass-logo.JPG" alt="NullClass Logo" class="exp-logo" />
-      <div>
-        <h3>NullClass</h3>
-        <p class="exp-role">Data Analyst Intern</p>
-        <span class="exp-meta">Oct 2025 – Dec 2025 • Remote, India</span>
-      </div>
-    </div>
-    <ul>
-      <li>Performed data cleaning, validation, and analysis using Microsoft Excel, Google Sheets, and Python to ensure data
-accuracy, integrity, and extract meaningful insights from large datasets.</li>
-      <li> Developed interactive Power BI dashboards and reports to visualize trends, patterns, and key metrics, enabling
-data-driven decision-making and business growth.</li>
+<div class="card" style="text-align:center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" width="42"><p>Matplotlib</p></div>
 
-      <li>Worked closely with product and operations teams to update reports, refine metrics, and ensure analytics outputs aligned
-with business needs.</li>
-      <li>Converted raw operational data into executive-ready dashboards, enabling faster review cycles and informed
-decision-making.</li>
-    </ul>
-  </div>
+<div class="card" style="text-align:center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="42"><p>SQL</p></div>
 
-  <!-- Experience Card -->
-  <div class="experience-card">
-    <div class="exp-top">
-      <img src="dxc-logo.png" alt="DXC Logo" class="exp-logo" />
-      <div>
-        <h3>DXC Technology</h3>
-        <p class="exp-role">Analyst I – Infrastructure Services</p>
-        <span class="exp-meta">June 2020 – July 2024 • Bengaluru, India</span>
-      </div>
-    </div>
-    <ul>
-      <li>Conducted Excel-based data analysis to monitor performance metrics, monthly KPIs, and SLA indicators, enabling accurate weekly, monthly, and quarterly reporting for business stakeholders.</li>
-      <li>Built Excel dashboards to track incident KPIs and highlight recurring issues → improved process efficiency by 15% .</li>
-      <li>Collaborated with cross-functional teams to ensure accurate data validation and reporting flow.</li>
-    <li>Instead of manually monitoring servers, consolidated health metrics into Excel dashboards to identify failure patterns and
-support proactive decisions that reduced outages by 20% .</li>
-    <li>Supported data migration and operational analytics by moving data from on-premises systems to AWS S3, analyzing
+<div class="card" style="text-align:center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="42"><p>Git</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="42"><p>GitHub</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" width="42"><p>Power BI</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg" width="38"><p>Excel</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" width="38"><p>Tableau</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://cdn-icons-png.flaticon.com/512/4149/4149696.png" width="38"><p>Data Visualization</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://cdn-icons-png.flaticon.com/512/4149/4149627.png" width="38"><p>Statistics</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" width="38"><p>AWS</p></div>
+
+<div class="card" style="text-align:center;">
+<img src="https://cdn-icons-png.flaticon.com/512/4149/4149643.png" width="38"><p>Machine Learning</p></div>
+
+</div>
+</section>
+
+<!----------------------------------- Experience Section ------------------------------>
+
+
+<section class="section" id="experience" style="background:transparent;">
+<div style="max-width:700px;margin:0 auto;">
+<h2 style="text-align:center;margin-bottom:25px;">Experience</h2>
+
+<!---Nullclass-->
+<div class="card project-item" onclick="toggleProject('e1')">
+<div class="project-header">
+<div style="display:flex;align-items:center;gap:10px;">
+<img src="assets/nullclass-logo.JPG" style="width:45px;height:45px;object-fit:contain;">
+<span>NullClass <br> Data Analyst Intern<br><p style="font-size:0.9rem;color:#555;">Oct 2025 – Dec 2025 | Remote, India</p></span>
+</div>
+<span class="arrow">➜</span>
+</div>
+<div class="project-body" id="e1">
+<ul>
+<li>Gathered, cleaned, and analyzed datasets using Python, Excel, and Google Sheets to support analytics and reporting
+needs.</li>
+<li>Developed Power BI dashboards to visualize KPIs, trends, and business performance metrics.</li>
+<li>Assisted in documentation of findings and insights, converting analytical outcomes into clear, actionable
+recommendations.</li>
+<li>Supported analytics test planning by defining metrics, thresholds, and validation logic for business reporting.</li>
+<li>Ensured data consistency and accuracy through validation checks before publishing reports.</li>
+</ul>
+</div>
+</div>
+
+<!-------DXC Tech---->
+<div class="card project-item" onclick="toggleProject('e2')">
+<div class="project-header">
+<div style="display:flex;align-items:center;gap:10px;">
+<img src="assets/dxc-logo.png" style="width:50px;height:50px;object-fit:contain;">
+<span>DXC Technology<br>Analyst I - Infrastructure Services<br><p style="font-size:0.9rem;color:#555;">4th Jun 2020 – 4th Jul 2024 | Bengaluru, India</p></span>
+</div>
+<span class="arrow">➜</span>
+</div>
+<div class="project-body" id="e2">
+<ul>
+<li>Conducted Excel-based data analysis to monitor performance metrics, KPIs, and SLA indicators, enabling accurate weekly,
+monthly, and quarterly reporting for business stakeholders.</li>
+<li>Built Excel dashboards to track incident KPIs and highlight recurring issues → improved process efficiency by 15% .</li>
+<li>Gathered, cleaned, and validated data to ensure high data accuracy and integrity across recurring and ad-hoc reports.</li>
+<li>Consolidated health metrics into Excel dashboards to identify failure patterns and support proactive decisions that
+reduced outages by 20% .</li>
+<li>Supported data migration and operational analytics by moving data from on-premises systems to AWS S3, analyzing
 incident and SLA trends, and delivering insights that helped reduce SLA breaches and improve service quality.</li>
-    <li>Supported ETL-style data preparation and transformation for reporting and dashboarding.</li>
-    </ul>
-  </div>
+<li>Supported ETL-style data preparation and transformation for reporting and dashboarding.</li>
+<li>Designed analytics-driven test cases to identify recurring failures and control gaps, contributing to 15% process efficiency
+improvement.</li>
+<li>Designed analytics-driven test cases and prepared structured documentation/workpapers, translating complex findings
+into clear, actionable insights for cross-functional stakeholders.</li>
+</ul>
+</div>
+</div>
 
-  <!-- Experience Card -->
-  <div class="experience-card">
-    <div class="exp-top">
-      <img src="mcware-logo.JPG" alt="Mcare Logo" class="exp-logo" />
-      <div>
-        <h3>Mcare Technologies</h3>
-        <p class="exp-role">Front End Developer</p>
-        <span class="exp-meta">Jun 2019 – Nov 2019 • Bengaluru, India</span>
+
+<!---MCware Tech-->
+<div class="card project-item" onclick="toggleProject('e3')">
+<div class="project-header">
+<div style="display:flex;align-items:center;gap:10px;">
+<img src="assets/mcware-logo.JPG" style="width:50px;height:50px;object-fit:contain;">
+<span>MCWare Technologies <br> Front-End Developer<br><p style="font-size:0.9rem;color:#555;">Jun 2019 – Nov 2019 | Bangalore, India</p></span>
+</div>
+<span class="arrow">➜</span>
+</div>
+<div class="project-body" id="e3">
+<ul>
+<li>Managed full website development life cycle: designing, developing, testing, and deploying web features within
+deadlines.</li>
+<li>Prioritized user experience to guide design decisions and improve overall interface functionality.</li>
+<li>Designed and deployed interactive web applications using HTML, CSS, and JavaScript.</li>
+<li>Collaborated with internal teams to translate requirements into functional solutions, improving usability and interface
+performance.</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-------------------------------------------Projects------------------------------------->
+<section class="section" id="projects" style="background:rgb(240, 240, 252);">
+<div style="max-width:750px;margin:0 auto;border-radius: 3%;">
+    <h2 style="text-align:center;margin-bottom:25px;">Projects</h2>
+
+    <div class="card project-item" onclick="toggleProject('p1')" style="cursor:pointer;">
+      <!-- Header -->
+      <div class="project-header" style="display:flex;justify-content:space-between;align-items:center;margin-top: 10px;">
+        <span style="font-weight:600;padding-left: 30px;">Quick_Buy - Live Sales Dashbaord</span>
+        <span class="arrow">➜</span>
+      </div>
+      <!-- Body -->
+      <div class="project-body" id="p1" style="display:none;margin-top:18px;">
+        <!-- Buttons -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;margin-left:200px;">
+          <a href="https://github.com/MahanandaR/Quick_Buy_Sales_Analysis" target="_blank" class="proj-btn"> GitHub</a>
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiNTA2YWQwNTItYTY2OC00NjFkLWE4OGMtNmE1NjY0NzliMDFiIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9" target="_blank" class="proj-btn"> Dashbaord</a>
+        </div>
+        <!-- Problem -->
+        <h4>Problem</h4>
+        <ul class="proj-list">
+          <li>Quick Buy is a leading superstore operating across the United States.</li>
+  <li>It manages thousands of product transactions daily across multiple regions.</li>
+  <li>The store's operations relied on manual spreadsheets and SQL queries to track business performance.</li>
+  <li>As a result, decision-making was slowed down and growth opportunities were harder to identify.</li>
+        </ul>
+        <!-- Solution -->
+        <h4>Solution</h4>
+        <ul class="proj-list">
+          <li>Built an automated ETL pipeline using Python, SQLAlchemy, and GitHub Actions for daily data updates.</li>
+  <li>Developed Python ETL scripts to extract, transform, and load 50,000+ sales records into a Neon database.</li>
+  <li>Automated daily data generation (~100 new transactions/day) to simulate real-time sales activity.</li>
+  <li>Integrated Power BI with the Neon database, enabling real-time auto-refreshing dashboards.</li>
+        </ul>
+        <!-- Impact -->
+        <h4>Key Insights</h4>
+        <ul class="proj-list">
+         <li>Standard Class accounts for ~60% of sales (~₹5.1M) and profit (~₹897K), making it the top shipping mode.</li>
+  <li>Consumer Segment generates ~50% of revenue (~₹4.26M) and profit (~₹757K), the primary customer base.</li>
+  <li>Q4 (Oct–Dec) contributes ~27% of annual revenue, showing strong seasonal demand and marketing potential.</li>
+  <li>Paper, Binders, and Phones are the top-performing sub-categories, contributing ~45% of total revenue.</li>
+  <li>West and East regions lead with ~58% of total sales, while the South (~19%) shows growth potential.</li>
+  <li>Top 5 States (CA, NY, TX, PA, OH) contribute ~54% of sales, with CA alone driving ~21%.</li>
+        </ul>
+        <!-- Result -->
+        <h4>Impact</h4>
+        <ul class="proj-list">
+          <li>Improved daily data update time from hours to under a minute (average ~45 seconds) using GitHub Actions.</li>
+          <li>Delivered a reliable, low-latency, fully automated data pipeline with zero manual intervention.</li>
+          <li>Achieved 100% workflow reliability, with zero pipeline failures since deployment.</li>
+        </ul>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiNTA2YWQwNTItYTY2OC00NjFkLWE4OGMtNmE1NjY0NzliMDFiIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9"
+            target="_blank"><img src="assets/dash.JPG" alt="Dashly" style="border-radius: 0;width: 700px;" /></a>
+      </div>
+      </div>
+
+<!---------------------PriceMycar--------->
+    <div class="card project-item" onclick="toggleProject('p2')" style="cursor:pointer;">
+      <!-- Header -->
+      <div class="project-header" style="display:flex;justify-content:space-between;align-items:center;margin-top: 10px;">
+        <span style="font-weight:600;padding-left: 30px;">PriceMyCar : Used Car Pricing System</span>
+        <span class="arrow">➜</span>
+      </div>
+      <!-- Body -->
+      <div class="project-body" id="p2" style="display:none;margin-top:18px;">
+        <!-- Buttons -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;margin-left:200px;">
+          <a href="https://github.com/MahanandaR/Car_Price_Prediction" target="_blank" class="proj-btn"> GitHub</a>
+          <a href="https://car-price-prediction-xayj.onrender.com/docs" target="_blank" class="proj-btn"> Application</a>
+          <a href="https://mahanandar.github.io/Car_Price_Prediction/" target="_blank" class="proj-btn"> Swagger UI</a>
+        </div>
+        <!-- Problem -->
+        <h4>Problem</h4>
+        <ul class="proj-list">
+          <li>In the used car market, buyers and sellers often struggle to determine a fair price for their vehicles.</li>
+          <li>This project aims to provide accurate and transparent pricing for used cars by analyzing real-world data.</li>
+        </ul>
+        <!-- Solution -->
+        <h4>Solution</h4>
+        <ul class="proj-list">
+          <li>Built and deployed an end-to-end ML pipeline to predict used car prices from real-world data.</li>
+          <li>Collected and cleaned 2,800+ used car records from Cars24 using Selenium and BeautifulSoup.</li>
+          <li>Optimized dataset memory usage by 90% through downcasting data types and converting to Parquet.</li>
+          <li>Trained models using Scikit-learn Pipelines & ColumnTransformer to avoid data leakage.</li>
+          <li>Deployed the ML model as an API using FastAPI on Render.</li>
+          <li>Built an HTML/CSS/JS web application hosted on GitHub Pages to interact with the API.</li>
+          <li>Containerized the entire application using Docker and pushed to Docker Hub.</li>
+        </ul>
+        <!-- Impact -->
+        <h4>Impact</h4>
+        <ul class="proj-list">
+          <li>Achieved 30% lower MAE and 12% higher R² score compared to baseline regression models.</li>
+          <li>Reduced prediction error variance by 70%, ensuring stable and reliable predictions.</li>
+        </ul>
+        <!-- Result -->
+        <h4>Result</h4>
+        <ul class="proj-list">
+          <li>Helps car owners quickly find the right selling price using real-world data.</li>
+          <li>Makes it easier for buyers to verify fair pricing before purchase decisions.</li>
+        </ul>
+        <a href="https://mahanandar.github.io/Car_Price_Prediction/"
+            target="_blank"><img src="assets/car.JPG" alt="Dashly" style="border-radius: 0;width: 720px;" /></a>
       </div>
     </div>
-    <ul>
-      <li>Designed and deployed interactive web applications using HTML, CSS, and JavaScript.</li>
-      <li>Managed full website development lifecycle from design to deployment.</li>
-      <li>Improved UI/UX for better usability and performance.</li>
-    </ul>
-  </div>
-</section>
 
-
-  
-  
-  <section id="certificate">
-  <h1>Certificates</h1>
-  <img src="Mahananda_Mallikarjun_DATA_SCIENCE_Certificate_DATMUKCMRV.jpeg" alt="AWS"  width="700"
-    height="400" />
-  <b><p>Data Science and Artificial Intelligence</p></b>
-</section>
-
-  <section id="projects">
-    <h1>Projects</h1>
-
-     <div class="project">
-      <h3>End-to-End Automated Sales Analytics</h3>
-      <p>Built a fully automated ETL pipeline using Python, SQLAlchemy, and GitHub Actions for seamless daily updates.
-        Developed custom ETL scripts to process and load 50,000+ sales records into a Neon PostgreSQL cloud database...</p>
-      <a href="https://www.linkedin.com/in/mahananda-rasure-031b64162/details/projects/" target="_blank">GitHub</a>
-      <a href="https://app.powerbi.com/view?r=eyJrIjoiNTA2YWQwNTItYTY2OC00NjFkLWE4OGMtNmE1NjY0NzliMDFiIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9" target="_blank">Live Demo</a>
-    </div>
-
-    <div class="project">
-      <h3>Customer-trends-data-analysis</h3>
-      <p>This project examines shopping patterns and customer behavior using a dataset of 3,900 transactions across various product categories..</p>
-      <a href="https://github.com/MahanandaR/Customer_Trends_Behavior_Analysis---DataAnalysis" target="_blank">GitHub</a>
-      <a href="https://app.powerbi.com/view?r=eyJrIjoiZGIzOWU2ZDQtNjg1MC00ZDRjLTk4M2QtY2FlMDMzMzYxNTUyIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9" target="_blank">Live Demo</a>
-    </div>
-
-     <div class="project">
-      <h3>Bank Loan Dashboard</h3>
-      <p>Interactive Power BI dashboard to visualize loan performance metrics with DAX and data modeling.</p>
-      <a href="https://github.com/MahanandaR/BANK-Loan-Dashboard" target="_blank">GitHub</a>
+<!----------------------------------Customer_Trends_Behavior_Analysis---DataAnalysis---------------------->
+    <div class="card project-item" onclick="toggleProject('p3')" style="cursor:pointer;">
+      <!-- Header -->
+      <div class="project-header" style="display:flex;justify-content:space-between;align-items:center;margin-top: 10px;">
+        <span style="font-weight:600;padding-left: 30px;">Customer_Trends_Behavior_Analysis</span>
+        <span class="arrow">➜</span>
+      </div>
+      <!-- Body -->
+      <div class="project-body" id="p3" style="display:none;margin-top:18px;">
+        <!-- Buttons -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;margin-left:200px;">
+          <a href="https://github.com/MahanandaR/Customer_Trends_Behavior_Analysis---DataAnalysis" target="_blank" class="proj-btn"> GitHub</a>
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiZGIzOWU2ZDQtNjg1MC00ZDRjLTk4M2QtY2FlMDMzMzYxNTUyIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9" target="_blank" class="proj-btn"> Dashboard</a>
+        </div>
+        <!-- Problem -->
+        <h4>Problem</h4>
+        <ul class="proj-list">
+          <li>Businesses lack clear visibility into customer behavior and spending patterns across multiple product categories.</li>
+          <li>Transactional data is underutilized, making it difficult to identify customer segments, product popularity, and purchase preferences.</li>
+          <li>Decision-making remains intuition-driven instead of data-driven, limiting growth in personalization, marketing effectiveness, and customer retention.</li>
+        </ul>
+        <!-- Solution -->
+        <h4>Solution</h4>
+        <ul class="proj-list">
+          <li>Cleaned and preprocessed 3,900 transaction records using Python, handling missing values, standardizing 18 features, and engineering new variables (age groups, purchase frequency).</li>
+          <li>Built a PostgreSQL database and migrated the full dataset for scalable SQL-based analysis.</li>
+          <li>Performed EDA to analyze customer demographics, purchase behavior, discounts, shipping patterns, and subscriptions.</li>
+          <li>Executed 10+ structured SQL business analyses (segmentation, revenue, product performance, loyalty, discount dependency).</li>
+          <li>Transformed raw transactional data into actionable business insights to support data-driven decision-making.</li>
+        </ul>
+        <!-- Impact -->
+        <h4>Impact</h4>
+        <ul class="proj-list">
+          <li>Enabled data-driven business decisions by converting 3,900 raw transactions into structured business intelligence.</li>
+          <li>Improved visibility into customer behavior, spending habits, and loyalty patterns for strategic planning.</li>
+          <li>Supported targeted marketing, customer retention, and personalization strategies using segmentation insights.</li>
+          <li>Delivered actionable insights for revenue optimization, product strategy, and customer experience improvement.</li>
+        </ul>
+        <!-- Result -->
+        <h4>Result</h4>
+        <ul class="proj-list">
+          <li>Delivered a complete end-to-end analytics solution transforming 3,900 transactions into structured business intelligence for strategic decision-making.</li>
+          <li>Enabled actionable insights for customer segmentation, revenue growth, product optimization, and loyalty strategy, supporting data-driven business planning.</li>
+        </ul>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGIzOWU2ZDQtNjg1MC00ZDRjLTk4M2QtY2FlMDMzMzYxNTUyIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9"
+            target="_blank"><img src="assets/dash2.JPG" alt="Dashly" style="border-radius: 0;width: 720px;" /></a>
+      </div>
     </div>
     
-    <div id="more-projects" style="display: none;">
-      
-    
-
-    <div class="project">
-      <h3>Health Insurance Prediction</h3>
-      <p>Estimate health insurance costs based on user lifestyle and health attributes using an ML-powered web app built with Streamlit and XGBoost.</p>
-      <a href="https://github.com/MahanandaR/Insurance_Prediction_MLProject.git" target="_blank">GitHub</a>
-      <a href="https://insurancepredictionmlproject-a8j4d2dao9chryprjm3ust.streamlit.app/" target="_blank">Live Demo</a>
+ <!---------------------------------Bank Loand Dashboard-------------------->
+ <div class="card project-item" onclick="toggleProject('p4')" style="cursor:pointer;">
+      <!-- Header -->
+      <div class="project-header" style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+        <span style="font-weight:600;padding-left: 30px;">Bank Loan Dashboard</span>
+        <span class="arrow">➜</span>
+      </div>
+      <!-- Body -->
+      <div class="project-body" id="p4" style="display:none;margin-top:18px;">
+        <!-- Buttons -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;margin-left:200px;">
+          <a href="https://github.com/MahanandaR/BANK-Loan-Dashboard" target="_blank" class="proj-btn"> GitHub</a>
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiZmIyMDI4ZTAtNmYxMi00MzFiLWE3NTgtMjdiNjM1YTM5NWMwIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9" target="_blank" class="proj-btn"> Dashboard</a>
+        </div>
+        <!-- Problem -->
+        <h4>Problem</h4>
+        <ul class="proj-list">
+          <li>Bank loan data was scattered across large datasets, making it difficult to track applications, disbursements, repayments, and risk metrics in one place.</li>
+          <li>Business teams struggled to analyze borrower risk, loan performance, recovery trends, and portfolio health efficiently.</li>
+        </ul>
+        <!-- Solution -->
+        <h4>Solution</h4>
+        <ul class="proj-list">
+          <li>Designed an interactive multi-page Power BI dashboard (Summary, Overview, Details) for end-to-end loan analytics.</li>
+          <li>Built automated KPIs for 38.6K loan applications, $435.8M funded, $473.1M received, 12% avg interest, and 13.3% avg DTI.</li>
+          <li>Implemented dynamic filtering by state, grade, purpose, loan status, and borrower type.</li>
+          <li>Created visual analytics for Good vs Bad Loans, MTD & MoM trends, geography, loan purpose, employment length, and home ownership.</li>
+          <li>Integrated a detailed transactional view for granular loan-level analysis.</li>
+        </ul>
+        <!-- Impact -->
+        <h4>Impact</h4>
+        <ul class="proj-list">
+          <li>Enabled real-time performance monitoring of loan portfolio health and risk exposure.</li>
+          <li>Improved decision-making speed by centralizing KPIs, trends, and borrower insights into one unified system..</li>
+          <li>Helped stakeholders identify high-risk segments, recovery patterns, and growth opportunities.</li>
+          <li>Provided clear visibility into good vs bad loan distribution (86.2% vs 13.8%), supporting smarter credit strategies.</li>
+        </ul>
+        <!-- Result -->
+        <h4>Result</h4>
+        <ul class="proj-list">
+          <li>Delivered a complete end-to-end analytics solution transforming 3,900 transactions into structured business intelligence for strategic decision-making.</li>
+          <li>Enabled actionable insights for customer segmentation, revenue growth, product optimization, and loyalty strategy, supporting data-driven business planning.</li>
+        </ul>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZmIyMDI4ZTAtNmYxMi00MzFiLWE3NTgtMjdiNjM1YTM5NWMwIiwidCI6ImFlODc5NDljLTJhZjYtNDgxOS05MDY2LTE0OWMyMDcwYTRmMSJ9"
+            target="_blank"><img src="assets/dash3.JPG" alt="Dashly" style="border-radius: 0;width: 720px;" /></a>
+      </div>
     </div>
-  
 
-    <div class="project">
-      <h3>E-commerce Product Delivery Prediction</h3>
-      <p>The goal is to help an international electronics e-commerce company optimize its logistics, improve customer satisfaction, and gain insights into factors affecting delivery performance.</p>
-      <a href="https://github.com/MahanandaR/E-Commerce-Product-Delivery-Prediction" target="_blank">GitHub</a>
-      <a href=" " target="_blank">Live Demo</a>
+
+<!--------------------------------------------------Hidden projects --------------------------------------------------->
+<div id="more-projects" style="display:none;">
+<div class="card project-item" onclick="toggleProject('p5')" style="cursor:pointer;">
+      <!-- Header -->
+      <div class="project-header" style="display:flex;justify-content:space-between;align-items:center;margin-top: 10px;">
+        <span style="font-weight:600;padding-left: 30px;">Yet to come</span>
+        <span class="arrow">➜</span>
+      </div>
+      <!-- Body -->
+      <div class="project-body" id="p5" style="display:none;margin-top:18px;">
+        <!-- Buttons -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;margin-left:200px;">
+          <a href="" target="_blank" class="proj-btn"> GitHub</a>
+          <a href="" target="_blank" class="proj-btn"> Dashboard</a>
+        </div>
+        <!-- Problem -->
+        <h4>Problem</h4>
+        <ul class="proj-list">
+          <li></li>
+          <li>.</li>
+        </ul>
+        <!-- Solution -->
+        <h4>Solution</h4>
+        <ul class="proj-list">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <!-- Impact -->
+        <h4>Impact</h4>
+        <ul class="proj-list">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+
+        </ul>
+        <!-- Result -->
+        <h4>Result</h4>
+        <ul class="proj-list">
+          <li></li>
+          <li></li>
+        </ul>
+        <a href=""
+            target="_blank"><img src="assets/" alt="Dashly" style="border-radius: 0;width: 720px;" /></a>
+      </div>
     </div>
+</div>
 
-    <div class="project">
-      <h3>Movie Recommender System</h3>
-      <p>A content-based movie recommendation model using cosine similarity and TMDb API.</p>
-      <a href="https://github.com/MahanandaR/Movie-recommender-system" target="_blank">GitHub</a>
-      <a href="https://movie-recommender-system-using-ml.streamlit.app/" target="_blank">Live Demo</a>
-    </div>
+    <!-- <div id="more-projects" style="display:none;">
+      <div class="card project-row">E-Commerce Sales Analysis <span>→</span></div>
+      <div class="card project-row">Employee Attrition Prediction <span>→</span></div>
+      <div class="card project-row">Health Insurance Risk Predictor <span>→</span></div>
+      <div class="card project-row">Customer Segmentation System <span>→</span></div>
+    </div> -->
 
-     <div class="project">
-      <h3>Car_Price_Prediction</h3>
-      <p>In the used car market, buyers and sellers often struggle to determine a fair price for their vehicle.
-        This project aims to provide accurate and transparent pricing for used cars by analyzing real-world data..</p>
-      <a href="https://github.com/MahanandaR/Car_Price_Prediction" target="_blank">GitHub</a>
-      <a href="https://mahanandar.github.io/Car_Price_Prediction/" target="_blank">Live Demo</a>
-    </div>
-
-     <div class="project">
-      <h3>SmartLinkBot</h3>
-      <p>Build a chatbot that allows users to ask questions about the latest news headlines from reliable sources like NDTV, BBC, or India Today, and get summarized, intelligent answers.</p>
-      <a href="https://github.com/MahanandaR/SmartLinkBot" target="_blank">GitHub</a>
-      <a href=" https://smartlinkbot-lh5dxq5wbnhapwzqrqxxju.streamlit.app/" target="_blank">Live Demo</a>
+ 
+    <!-- Button -->
+    <div style="text-align:center;margin-top:10px;  cursor:pointer;">
+      <button id="toggleProjectsBtn" class="btn secondary" onclick="toggleProjects()">
+        Show More
+      </button>
     </div>
 
 </div>
-    <!-- Add more here -->
-    <button id="showMoreBtn" class="toggle-btn">Show More</button>
-
-    <button id="showLessBtn" class="toggle-btn" style="margin-top: 1rem;display: none;">
-      Show Less
-    </button>
-  </section>
-
-
-<section id="contact">
-  <div style="background: #d1cfcf; padding: 1rem; border-radius: 5px;height: 140px; max-width: 600px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-  
-  <h1>Get in Touch</h1>
-  <p>You can reach me via:</p>
-    <i class="fa fa-envelope" style="font-size:22px;color:rgb(42, 38, 38)"></i><a href="mailto:mahananda.m209@gmail.com" style="color: #0a192f; font-weight: bold;text-decoration: none;font-size: 22px;">Email Me</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-     <i class="fa-brands fa-linkedin" style="font-size:22px;color:rgb(26, 136, 240)"></i><a href="https://www.linkedin.com/in/mahananda-rasure-031b64162/" target="_blank" style="color: #0a192f;text-decoration: none; font-weight: bold;font-size: 22px;">LinkedIn </a>
-  </p>
-  </div>
-</section>
 </section>
 
+<!-------------------------- Certificates Section ---------------------------------->
+<section class="section" id="certificates" style="background:rgb(240, 240, 252);">
+<div style="max-width:900px;margin:0 auto;">
+<h2 style="text-align:center;margin-bottom:25px;">Certificates</h2>
 
-  <footer>
-    <p>Mahananda Mallikarjun</p>
-  </footer>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;">
 
-  <script>
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
+<div class="card" style="text-align:center;padding:18px;">
+<img src="assets/Mahananda_Mallikarjun_DATA_SCIENCE_Certificate_DATMUKCMRV.jpeg" style="width:100%;max-width:360px;border-radius:12px;">
+<div style="margin-top:12px;">
+<a href="https://bia.bostoninstituteofanalytics.org/bia-certification/QklBXzczMjZfQklB" class="btn secondary" style="text-decoration:none;display:inline-block;">Click Here ↗</a>
+</div>
+</div>
+
+<div class="card" style="text-align:center;padding:18px;">
+<img src="assets/Mahananda_Mallikarjun_ARTIFICIAL_INTELLIGENCE_Certificate_EQRSWVTYOT.jpeg" style="width:100%;max-width:360px;border-radius:12px;">
+<div style="margin-top:12px;">
+<a href="https://bia.bostoninstituteofanalytics.org/bia-certification/QklBXzczMjdfQklB" class="btn secondary" style="text-decoration:none;display:inline-block;">Click Here ↗</a>
+</div>
+</div>
 
 
-    document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
+</div>
+</div>
+</section>
 
-    // Remove active class from all links
-    document.querySelectorAll('nav a').forEach(navLink => navLink.classList.remove('active'));
+<style>
+.project-item{margin-bottom:10px;cursor:pointer;padding:6px 8px;}
+.project-header{display:flex;justify-content:space-between;align-items:center;font-weight:500;font-size:0.95rem;}
+.project-body{display:none;margin-top:10px;font-size:0.9rem;}
+</style>
 
-    // Add active class to the clicked link
-    this.classList.add('active');
+<script>
 
-    // Smooth scroll to target section
-    const targetId = this.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+function showPhone(){
+  alert('📞 +91 82173 16209');
+}
 
-  </script>
- 
- <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const showMoreBtn = document.getElementById("showMoreBtn");
-    const showLessBtn = document.getElementById("showLessBtn");
-    const moreProjects = document.getElementById("more-projects");
+function toggleProjects(){
+  const more = document.getElementById('more-projects');
+  const btn = document.getElementById('toggleProjectsBtn');
 
-    showMoreBtn.addEventListener("click", () => {
-      moreProjects.style.display = "block";
-      showMoreBtn.style.display = "none";      // hide "Show More"
-      showLessBtn.style.display = "inline-block"; // show "Show Less"
-    });
+  if(more.style.display === 'none'){
+    more.style.display = 'block';
+    btn.innerText = 'Show Less';
+  } else {
+    more.style.display = 'none';
+    btn.innerText = 'Show More';
+    document.getElementById('projects').scrollIntoView({behavior:'smooth'});
+  }
+}
 
-    showLessBtn.addEventListener("click", () => {
-      moreProjects.style.display = "none";
-      showMoreBtn.style.display = "inline-block"; // show "Show More"
-      showLessBtn.style.display = "none";      // hide "Show Less"
-    });
-  });
+function toggleProject(id){
+  const el = document.getElementById(id);
+  // safety check
+  if(!el){
+    console.log("No element found with id:", id);
+    return;
+  }
+
+  if(el.style.display === "block"){
+    el.style.display = "none";
+  }else{
+    el.style.display = "block";
+  }
+}
+
+function toggleAbout(){
+  const shortText = document.getElementById('about-short');
+  const fullText = document.getElementById('about-full');
+  if(shortText.style.display === 'none'){
+    shortText.style.display = 'block';
+    fullText.style.display = 'none';
+  } else {
+    shortText.style.display = 'none';
+    fullText.style.display = 'block';
+  }
+}
+
+function toggleMobileMenu(){
+  const menu = document.getElementById('mobileMenu');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function closeMobile(){
+  document.getElementById('mobileMenu').style.display='none';
+}
+
+
+function openResumePreview(){
+  document.getElementById('resumeModal').style.display='flex';
+}
+
+function closeResumePreview(){
+  document.getElementById('resumeModal').style.display='none';
+}
+
 </script>
 
+<style>
+.project-main{cursor:pointer;}
+.project-content{margin-top:15px;font-size:0.95rem;}
+.project-row{padding:18px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.project-row:hover{background:#f4f6ff;}
+</style>
 
+<!------------------------------------Contact-------------------------------------------->
+<section class="section" id="contact" style="background:rgb(240, 240, 252);">
+<div style="max-width:900px;margin:0 auto;">
+<div class="card" style="padding:30px;">
+<h2 style="text-align:center;margin-bottom:25px;">Contact</h2>
+
+<!-- REAL EMAIL FORM -->
+<form action="https://formspree.io/f/mykeqvpy" method="POST" style="display:flex;flex-direction:column;gap:18px;">
+
+<div>
+<label>Name</label>
+<input type="text" name="name" placeholder="Your Name" required
+style="width:100%;padding:12px;border-radius:12px;border:1px solid #ccc;">
+</div>
+
+<div>
+<label>Email</label>
+<input type="email" name="email" placeholder="yourmail@gmail.com" required
+style="width:100%;padding:12px;border-radius:12px;border:1px solid #ccc;">
+</div>
+
+<div>
+<label>Message</label>
+<textarea name="message" rows="5" placeholder="Write your message here..." required
+style="width:100%;padding:12px;border-radius:12px;border:1px solid #ccc;"></textarea>
+</div>
+
+<!-- Email config -->
+<input type="hidden" name="_subject" value="New Portfolio Contact Message">
+<input type="hidden" name="_template" value="table">
+
+<div style="text-align:center;">
+<button type="submit" class="btn primary">Send Message</button>
+</div>
+
+</form>
+
+<p style="text-align:center;margin-top:12px;font-size:0.85rem;color:#666;">
+📩 Let's Connect Here
+</p>
+
+</div>
+</div>
+</section>
+
+<div class="footer">© 2026 Mahananda Mallikarjun | Data Analyst Portfolio</div>
+
+</div>
+</body>
+</html>
